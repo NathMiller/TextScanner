@@ -1,6 +1,10 @@
 import time
 
-document = "the quick brown brown brown fox"
+filePath = r"C:\Users\Nathan\Documents\targetFile.txt"
+with open(filePath, 'r') as file:
+    document = file.read()
+
+
 seek = input("Please enter the word you want replaced: ")
 replace1 = input("Please enter the first replacement string: ")
 replace2 = input("Please enter the second replacement string: ")
