@@ -1,10 +1,9 @@
 import time
 
 filePath = r"C:\Users\Nathan\Documents\targetFile.txt"
-updatedFile = r"C:\Users\Nathan\Documents\updatedFile.txt"
+destinationPath = r"C:\Users\Nathan\Documents\updatedFile.txt"
 with open(filePath, 'r') as file:
     document = file.read()
-
 
 seek = input("Please enter the word you want replaced: ")
 replace1 = input("Please enter the first replacement string: ")
@@ -23,9 +22,9 @@ for i in range(seekQuantity):
         instances.insert(i, [i, replace2])
         updatedDoc = updatedDoc.replace(seek, replace2, 1)
 
-f = open(updatedFile, "w")
-f.write(updatedDoc)
-f.close()
+updatedFile = open(destinationPath, "w")
+updatedFile.write(updatedDoc)
+updatedFile.close()
 
 print("Replacing values...")
 print("-------------------")
