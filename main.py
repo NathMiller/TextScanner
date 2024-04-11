@@ -1,7 +1,10 @@
+import time
+
 document = "the quick brown brown brown fox"
 seek = input("Please enter the word you want replaced: ")
 replace1 = input("Please enter the first replacement string: ")
 replace2 = input("Please enter the second replacement string: ")
+print("-------------------")
 
 seekQuantity = document.count(seek)
 updatedDoc = document
@@ -15,5 +18,8 @@ for i in range(seekQuantity):
         instances.insert(i, [i, replace2])
         updatedDoc = updatedDoc.replace(seek, replace2, 1)
 
-print(instances)
+print("Replacing values...")
+print("-------------------")
+time.sleep(2)
+print("Here is your updated document:")
 print(updatedDoc)
